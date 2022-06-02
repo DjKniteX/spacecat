@@ -1,0 +1,44 @@
+body{
+    background-image: url("space.jpg")
+}
+
+#menu {
+    border-style: solid;
+    border-color: black;
+    padding: 15px;
+    margin: 15px;
+    width: 10%;
+    background-color: white;
+}
+
+#menu button {
+    margin: 5px;
+}
+
+#main {
+    width: 50%;
+    padding: 150px;
+    margin: 15px;
+    border: solid black;
+    background-color: white;
+}
+
+.battleimage {
+    max-width: 300px; 
+    max-height: 300px;
+}
+
+#stats {
+    border-style: solid;
+    border-color: black;
+    padding: 25px;
+    margin: 25px;
+    width: 35%;
+    background-color: white;
+}
+
+
+.flex-container {
+    display: flex;
+}
+
