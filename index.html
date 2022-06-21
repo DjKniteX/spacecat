@@ -7,12 +7,14 @@
     <title>Space Cat</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
   </head>
   <body>
       <h1 style="color: red;">SPACE CAT</h1>
       <div id="main">
-          <h1>I am the monster</h1>
-          <img class="battleimage" src="pizza.png" />
+          <h1 id="monster">I am the monster</h1>
+          <img class="battleimage" id="pizza" src="pizza.png" />
           <img class="battleimage" src="cat.png" />
           <div>
             <p>HP:<div class="progress">
@@ -26,8 +28,42 @@
       <div id = "mainBox" class = "flex-container">
       <div id="menu" class="flex-child">
           <div>
-              <button onclick="attack()" class="btn btn-primary"><i class="ra ra-sword"></i>Attack</button>
-              <button class="btn btn-secondary">Cast Magic</button>
+              <button id="attack" onclick="attack()" class="btn btn-primary"><i class="ra ra-sword"></i>Attack</button>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Magic
+              </button>
+
+<!-- Modal -->
+<div class="modal fade" role="dialog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Get Started</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="MyForm" action="#" class="modal-form" onsubmit="nextModal()" >
+        <div class="modal-body">
+          <div class="form-check">
+            <input id="radio-social" class="form-check-input" type="radio" name="flexRadioDefault" value="fire" required>
+            <label class="form-check-label" for="radio-social">Fire</label>
+          </div>
+          <div class="form-check">
+            <input id="radio-custom" class="form-check-input" type="radio" name="flexRadioDefault" value="ice" required>
+            <label class="form-check-label" for="radio-custom">Ice</label>
+          </div>
+          <div class="form-check">
+            <input id="radio-custom" class="form-check-input" type="radio" name="flexRadioDefault" value="thunder" required>
+            <label class="form-check-label" for="radio-custom">Thunder</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn magic" onclick="magic()" type="submit" class="btn btn-dark btn" data-bs-dismiss="modal">Cast Spell</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
               <button class="btn btn-danger">Run</button>
 
           </div>
