@@ -28,42 +28,38 @@
       <div id = "mainBox" class = "flex-container">
       <div id="menu" class="flex-child">
           <div>
-              <button id="attack" onclick="attack()" class="btn btn-primary"><i class="ra ra-sword"></i>Attack</button>
+              <button id="attack"  onclick="attack()" class="btn btn-primary"><i class="ra ra-sword"></i>Attack</button>
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Magic
-              </button>
+
+<!-- Button trigger modal -->
+<button type="button" id="magic" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Magic
+</button>
 
 <!-- Modal -->
-<div class="modal fade" role="dialog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Get Started</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Spellbook</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form id="MyForm" action="#" class="modal-form" onsubmit="nextModal()" >
-        <div class="modal-body">
-          <div class="form-check">
-            <input id="radio-social" class="form-check-input" type="radio" name="flexRadioDefault" value="fire" required>
-            <label class="form-check-label" for="radio-social">Fire</label>
-          </div>
-          <div class="form-check">
-            <input id="radio-custom" class="form-check-input" type="radio" name="flexRadioDefault" value="ice" required>
-            <label class="form-check-label" for="radio-custom">Ice</label>
-          </div>
-          <div class="form-check">
-            <input id="radio-custom" class="form-check-input" type="radio" name="flexRadioDefault" value="thunder" required>
-            <label class="form-check-label" for="radio-custom">Thunder</label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button id="btn magic" onclick="magic()" type="submit" class="btn btn-dark btn" data-bs-dismiss="modal">Cast Spell</button>
-        </div>
-      </form>
+      <div class="modal-body">
+          <input class ="form-check-input" type="radio" id="css" name="spell" value="fire" checked="checked">
+          <label for="css">Fire</label><br>
+              <input class ="form-checked-input" type="radio" id="css" name="spell" value="ice">
+              <label for="css">Ice</label><br>
+              <input class ="form-check-input" type="radio" id="javascript" name="spell" value="thunder">
+              <label for="javascript">Thunder</label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button onclick="magic()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Cast Spell</button>
+      </div>
     </div>
   </div>
 </div>
+
               <button class="btn btn-danger">Run</button>
 
           </div>
